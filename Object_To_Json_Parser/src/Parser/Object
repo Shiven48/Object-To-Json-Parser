@@ -1,0 +1,25 @@
+
+The current implementation is not upto the mark
+
+// This is the final java object that should be converted into json
+
+Book (Java Object)
+[
+    title="The Great Gatsby",
+    author={name="F. Scott Fitzgerald", nationality="American", birthdate="1896-09-24"},
+    publication_year=1925,   									// correct (not in order)
+    genres=["Fiction", "Classic"], 
+    reviews=[
+		  		{reviewer="Alice", rating=5, comment="A timeless classic!"},
+		  		{reviewer="Bob", rating=4, comment="Great story, but a bit slow at times."}
+            ]
+]
+
+// Complex object for trial purpose
+
+	Author author = new Author("F. Scott Fitzgerald","American",LocalDate.of(1896, 9, 24));
+	Review review1 = new Review("Alice",5,"A timeless classic!");
+	List<Review> reviews = new ArrayList<Review>();
+	reviews.add(review1);	
+	String[] genres = {"Fiction", "Classic"};
+	Book book = new Book("The Great Gatsby",author,1925,genres,reviews);
