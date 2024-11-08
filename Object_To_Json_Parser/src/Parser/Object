@@ -23,3 +23,14 @@ Book (Java Object)
 	reviews.add(review1);	
 	String[] genres = {"Fiction", "Classic"};
 	Book book = new Book("The Great Gatsby",author,1925,genres,reviews);
+
+	
+// Output till Now Still needs some changes
+{
+	"genres":[ "Fiction","Classic" ], 
+	"publication":1925, 
+	"title":"The Great Gatsby", "author":{name:F. Scott Fitzgerald, nationality:American, birthdate:1896-09-24, intern:true}, 
+	"reviews":[ 
+				{reviewer:Alice, rating:5, comment:A timeless classic!} 
+			  ]
+}

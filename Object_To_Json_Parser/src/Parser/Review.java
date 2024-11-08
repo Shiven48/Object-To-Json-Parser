@@ -41,7 +41,7 @@ public class Review {
 
 	@Override
 	public String toString() {
-		return "Review [reviewer=" + reviewer + ", rating=" + rating + ", comment=" + comment + "]";
+		return "{reviewer=" + reviewer + ", rating=" + rating + ", comment=" + comment + "}";
 	}
 	
 }

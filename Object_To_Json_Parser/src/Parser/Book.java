@@ -61,9 +61,12 @@ public class Book {
 	public void setReviews(List<Review> reviews) {
 		this.reviews = reviews;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Book [title=" + title + ", publication=" + publication + ", genres=" + Arrays.toString(genres) + "]";
-	}	 
+		return "{title=" + title + ", author=" + author + ", publication=" + publication + ", genres="
+				+ Arrays.toString(genres) + ", reviews=" + reviews + "}";
+	}
+	
+		 
 }
