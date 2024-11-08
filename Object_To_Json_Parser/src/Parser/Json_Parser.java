@@ -16,20 +16,20 @@ public class Json_Parser {
 	
 	public static void main(String[] args) {
 		
-//		Author author = new Author("F. Scott Fitzgerald","American",LocalDate.of(1896, 9, 24),true);
-//		Review review1 = new Review("Alice",5,"A timeless classic!");
-//		List<Review>reviews = new ArrayList<Review>();
-//		riviews.add(review1);	
-//		String[] books = {"Fiction", "Classic"};
-//		Book books = new Book("The Great Gatsby",author,1925,genres,reviews);
+		Author author = new Author("F. Scott Fitzgerald","American",LocalDate.of(1896, 9, 24),true);
+		Review review1 = new Review("Alice",5,"A timeless classic!");
+		List<Review>reviews = new ArrayList<Review>();
+		reviews.add(review1);	
+		String[] genres = {"Fiction", "Classic"};
+		Book books = new Book("The Great Gatsby",author,1925,genres,reviews);
 		
 		properties = getFields(books);
-		System.out.println(properties);								// Here
+		//System.out.println(properties);								
 		
 		String obj_format = books.toString();
 		
 		//This is the object format
-		System.out.println("Java Object : "+obj_format); 				// Here
+		System.out.println("Java Object : "+obj_format); 				
 		System.out.println();
 		
 		Map<String, String> json_format = parseJSON(obj_format);
@@ -37,7 +37,7 @@ public class Json_Parser {
 		
 		json = json.replaceAll("=", ":");
 		//This is the Json format
-		System.out.println("Json Format : "+json);						// Here
+		System.out.println("Json Format : "+json);						
 	}
 
 	public static Map<String, String> parseJSON(String objectString) {
@@ -55,19 +55,19 @@ public class Json_Parser {
 		for (String part : parts) {
           // Split into key and value
           int equalIndex = findFirstEqualOutsideNested(part);
-          // System.out.println("Equal Index : "+equalIndex);				// Here
+          // System.out.println("Equal Index : "+equalIndex);				
           
           if (equalIndex != -1) {
               String key = part.substring(0, equalIndex).trim();
               String value = part.substring(equalIndex + 1).trim();
               
-              // System.out.println("Before: "key+"    :    "+value);										// Here
+              // System.out.println("Before: "key+"    :    "+value);										
               
               // Format the key-value pair
               key = "\"" + key + "\"";
               value = formatValue(key.replace("\"", ""), value);
               
-              // System.out.println("After: "+key+"    :    "+value);										// Here
+              // System.out.println("After: "+key+"    :    "+value);										
               
               jsonMap.put(key, value);
           }
