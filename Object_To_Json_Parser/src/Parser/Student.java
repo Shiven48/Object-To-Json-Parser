@@ -34,7 +34,7 @@ public class Student {
 	
 	@Override
 	public String toString() {
-		return "[id=" + id + ", name=" + name + ", roll_no=" + roll_no + "]";
+		return "{id=" + id + ", name=" + name + ", roll_no=" + roll_no + "}";
 	}
 	
 }

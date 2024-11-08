@@ -52,8 +52,8 @@ public class Author {
 
 	@Override
 	public String toString() {
-		return "[name=" + name + ", nationality=" + nationality + ", birthdate=" + birthdate + ", intern="
-				+ intern + "]";
+		return "{name=" + name + ", nationality=" + nationality + ", birthdate=" + birthdate + ", intern="
+				+ intern + "}";
 	}
 
 	
